@@ -1,6 +1,29 @@
-<h1>Landing Page (shared for both logged in and not logged)</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<p>we will show all the <strong>CAR</strong> here:</p>
+
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://kalemitravel.com/wp-content/uploads/2014/09/lamborghini_centro_milano_2.jpg');">
+  <div class="banner-content">
+    <h1>CarShark</h1>
+    <p>Rent a Luxury Car</p>
+    <form class="form-inline">
+  <label class="sr-only" for="inlineFormInputName2">Name</label>
+  <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Search Vehicle">
+  <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Pickup Date">
+
+  <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+  <div class="input-group mb-2 mr-sm-2">
+    <div class="input-group-prepend">
+      <div class="input-group-text"></div>
+    </div>
+    <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Drop Off Date">
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">Submit</button>
+</form>
+  </div>
+</div>
+
+
+
+
+
 
 <% @cars.each do |car| %>
   - Model: <%= car.model %><br>
@@ -10,3 +33,65 @@
   <br>
   - Description: <%= car.description %><br>
 <% end %>
+
+
+<!--Footer-->
+<footer class="page-footer font-small indigo pt-0">
+
+    <!--Footer Links-->
+    <div class="container">
+
+        <!--First row-->
+        <div class="row">
+
+            <!--First column-->
+            <div class="col-md-12 py-5">
+
+                <div class="mb-5 flex-center">
+
+                    <!--Facebook-->
+                    <a class="fb-ic">
+                        <i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    <!--Twitter-->
+                    <a class="tw-ic">
+                        <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    <!--Google +-->
+                    <a class="gplus-ic">
+                        <i class="fa fa-google-plus fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    <!--Linkedin-->
+                    <a class="li-ic">
+                        <i class="fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    <!--Instagram-->
+                    <a class="ins-ic">
+                        <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    <!--Pinterest-->
+                    <a class="pin-ic">
+                        <i class="fa fa-pinterest fa-lg white-text fa-2x"> </i>
+                    </a>
+                </div>
+            </div>
+            <!--/First column-->
+        </div>
+        <!--/First row-->
+    </div>
+    <!--/Footer Links-->
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3 text-center">
+        © 2018 Copyright:
+        <a href="https://mdbootstrap.com/material-design-for-bootstrap/"> MDBootstrap.com </a>
+    </div>
+    <!--/Copyright-->
+
+</footer>
+<!--/Footer-->
+
+                  Copy
+s
+
+
