@@ -4,35 +4,50 @@
     <h1>CarShark</h1>
     <p>Rent a Luxury Car</p>
     <form class="form-inline">
-  <label class="sr-only" for="inlineFormInputName2">Name</label>
-  <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Search Vehicle">
-  <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Pickup Date">
+      <label class="sr-only" for="inlineFormInputName2">Name</label>
+      <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Search Vehicle">
+      <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Pickup Date">
 
-  <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
-  <div class="input-group mb-2 mr-sm-2">
-    <div class="input-group-prepend">
-      <div class="input-group-text"></div>
-    </div>
-    <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Drop Off Date">
-  </div>
-  <button type="submit" class="btn btn-primary mb-2">Submit</button>
-</form>
+      <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+      <div class="input-group mb-2 mr-sm-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text"></div>
+        </div>
+        <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Drop Off Date">
+      </div>
+      <button type="submit" class="btn btn-primary mb-2">Submit</button>
+    </form>
   </div>
 </div>
 
-<% @cars.sample(3).each do |car| %>
-  - Model: <%= car.model %><br>
-  - Year: <%= car.year %><br>
-  - Seat: <%= car.seats %><br>
-  - Rate per day: <%= car.rate %><br>
-  - Description: <%= car.description %><br>
-  - <%= link_to "show", car_path(car) %><br>
-  <br>
-  -----------------------------------
-  <br>
-<% end %>
+
+<h1 id="landing-title" class="text-center" >Choose your best way to move</h1>
+
+
+<div class="card-deck ">
+  <div class="row">
+    <% @cars.sample(3).each do |car| %>
+    <div class="col-sm-4">
 
 
 
-<%= link_to "index", root_path %>
+        <div class="card" style="width:400px">
+          <img class="card-img-top" src="<%= ["https://images.unsplash.com/photo-1511338040450-bf274acbd588?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=93055a0f161d0d0cc6418efb0d678195&auto=format&fit=crop&w=967&q=80","https://images.unsplash.com/photo-1511360764098-91482031eaf6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f00548e0353da749a820370a03be8cfc&auto=format&fit=crop&w=1050&q=80","https://images.unsplash.com/photo-1523597193482-bd0e30999c06?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1cddaba8605d3997346e26d39763318e&auto=format&fit=crop&w=634&q=80"].sample %>" alt="Card image">
+          <div class="card-body">
+            <h4 class="card-title"><strong><%= car.model.capitalize %></strong></h4>
+            <p class="card-text"><em><%= car.description %></em></p>
+            <%= link_to "show", car_path(car), class:"btn btn-info" %>
+          </div>
+        </div>
+
+
+
+    </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+<%= link_to "index", root_path, class:"btn btn-primary" %>
 

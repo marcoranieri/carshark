@@ -14,9 +14,34 @@
 @import "components/index";
 @import "pages/index";
 
+#landing-title {
+  margin-top: 50px;
+}
+
+// make img card look nice-----------------
+.card-img-top {
+    width: 180%;
+    height: 15vw;
+    object-fit: cover;
+    box-shadow: 1px 1px 3px gray;
+    border-radius: 1px;
+}
+
+.card {
+  padding: 33px;
+  width: 300px !important;
+} // ---------------------------------------
+
+.padding-min{
+  padding: 30px;
+}
+
+.margin-top {
+  margin-top: 50px;
+}
 
 .footer {
-  background: #F4F4F4;
+    background: #F4F4F4;
   display: flex;
   align-items: center;
   justify-content: center;
