@@ -1,2 +1,12 @@
-<h1>Pages#home</h1>
+<h1>Landing Page (shared for both logged in and not logged)</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+<p>we will show all the <strong>CAR</strong> here:</p>
+
+<% @cars.each do |car| %>
+  - Model: <%= car.model %><br>
+  - Year: <%= car.year %><br>
+  - Seat: <%= car.seats %><br>
+  - Rate per day: <%= car.rate %><br>
+  <br>
+  - Description: <%= car.description %><br>
+<% end %>
