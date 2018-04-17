@@ -20,14 +20,16 @@
   </div>
 </div>
 
-<% @cars.each do |car| %>
+<% @cars.sample(3).each do |car| %>
   - Model: <%= car.model %><br>
   - Year: <%= car.year %><br>
   - Seat: <%= car.seats %><br>
   - Rate per day: <%= car.rate %><br>
-  <br>
   - Description: <%= car.description %><br>
-  - <%= link_to "show", car_path(car) %>
+  - <%= link_to "show", car_path(car) %><br>
+  <br>
+  -----------------------------------
+  <br>
 <% end %>
 
 
