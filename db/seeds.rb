@@ -1,9 +1,10 @@
 User.destroy_all
 Car.destroy_all
-
 a = User.create(email: "phil@aruba.it", password: "123456")
 b = User.create(email: "jack@ancona.com", password: "123456")
 c = User.create(email: "mike@bordeaux.fr", password: "123456")
+d = User.create(email: "marco@lewagon.it", password: "123456")
+puts "creating user"
 
 Car.create(user: a,model: "Ferrari Enzo", year: "2002", seats: 2, rate: 900, description: "The Enzo Ferrari is a 12 cylinder mid-engine berlinetta sports car named after the company's founder, Enzo Ferrari. It was built in 2002 using Formula One technology, such as a carbon-fibre body, F1-style electrohydraulic shift transmission, and carbon fibre-reinforced silicon carbide (C/SiC) ceramic composite disc brakes.")
 Car.create(user: b,model: "Lamborghini Aventador", year: "2016", seats: 2, rate: 1080, description: "Launched on 28 February 2011 at the Geneva Motor Show, five months after its initial unveiling in Sant'Agata Bolognese, the vehicle, internally codenamed LB834, was designed to replace the then-decade-old Murciélago as the new flagship model")

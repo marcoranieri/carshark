@@ -29,7 +29,7 @@
 
 .card {
   padding: 33px;
-  width: 300px !important;
+  width: 250px !important;
 }
 //card hover ---------------------------------------
 
@@ -96,3 +96,10 @@
   color: #D23333;
 }
 
+#luxury:hover {
+  color: orange;
+}
+
+.row {
+  margin: 0 15px;
+}
