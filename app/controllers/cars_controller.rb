@@ -2,14 +2,13 @@ class CarsController < ApplicationController
   before_action :set_car, only: [ :show ]
 
   def index
-
     if params.has_key?(:q)
 # search in SQL if found name containing anywhere(%) the value of research
       @cars = Car.where('model LIKE ?', "%#{params[:q]}%")
     else
       @cars = Car.all
     end
-
+    car_index
   end
 
   def show
@@ -36,6 +35,19 @@ class CarsController < ApplicationController
 
   def car_params
     params.require(:car).permit(:name, :photo)
+  end
+
+  def car_index
+    @cars = Car.where.not(latitude: nil, longitude: nil)
+
+    @markers = @cars.map do |car|
+      {
+        lat: car.latitude,
+        lng: car.longitude
+        #,
+        # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+      }
+    end
   end
 end
 
