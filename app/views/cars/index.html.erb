@@ -1,6 +1,13 @@
 <h1 class="text-center" id="top">Welcome to the show:</h1>
 <h3 class="text-center"><%= current_user.email.split("@")[0].capitalize %>, find now the perfect solution for you</h3>
 
+<form class="form-inline" method="get" action="/cars">
+
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q"> <!-- NAME="q" will PASS toINDEX.html.erb the PARAMS with the "word" searched to show the result -->
+
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search a car!</button>
+  </form>
+
 <div class="card-deck ">
   <div class="row">
     <% @cars.each do |car| %>
