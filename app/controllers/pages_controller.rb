@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 # action#home is open to "all" user
-skip_before_action :authenticate_user!, only: :home
+#skip_before_action :authenticate_user!, only: :home
 
 def home
   if params.has_key?(:q)

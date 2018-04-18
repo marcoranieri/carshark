@@ -2,12 +2,17 @@ class CarsController < ApplicationController
   before_action :set_car, only: [ :show ]
 
   def index
-    @cars = Car.all
+
+    if params.has_key?(:q)
+# search in SQL if found name containing anywhere(%) the value of research
+      @cars = Car.where('model LIKE ?', "%#{params[:q]}%")
+    else
+      @cars = Car.all
+    end
+
   end
 
   def show
-
-#
   end
 
   def new

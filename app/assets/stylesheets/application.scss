@@ -20,18 +20,47 @@
 
 // make img card look nice-----------------
 .card-img-top {
-    width: 180%;
-    height: 15vw;
-    object-fit: cover;
-    box-shadow: 1px 1px 3px gray;
-    border-radius: 1px;
+  width: 180%;
+  height: 15vw;
+  object-fit: cover;
+  box-shadow: 1px 1px 3px gray;
+  border-radius: 1px;
 }
 
 .card {
   padding: 33px;
   width: 300px !important;
-} // ---------------------------------------
+}
+//card hover ---------------------------------------
 
+
+// .panel.card-linked {
+//   position: relative;
+
+//           a.card-link {  /* This is the link of the entire card */
+//             position: absolute;
+//             height: 100%;
+//             width: 100%;
+//             z-index: 1;
+
+//             &:hover ~ .card-title {  /* Hints by underlining title that the card is clickable */
+//               text-decoration: underline;
+//             }
+//           }
+
+//         .card-image, .card-title, .card-actions, .card-body {   /* Basically all possible content of our panel /*
+//             pointer-events: none;  /* IMPORTANT! Lets clicks fall through */
+//             position: relative;
+//             z-index: 10;         /* IMPORTANT! Makes actual content be on top of linked card */
+
+//             .button, a {
+//                 pointer-events: auto;    /* IMPORTANT! ... Except for buttons and links that should be clickable */
+//               }
+//             }
+
+
+
+//-----------------------------------------
 .padding-min{
   padding: 30px;
 }
@@ -41,7 +70,7 @@
 }
 
 .footer {
-    background: #F4F4F4;
+  background: #F4F4F4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,3 +95,4 @@
 .footer .fa-heart {
   color: #D23333;
 }
+

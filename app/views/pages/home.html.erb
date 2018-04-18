@@ -21,13 +21,16 @@
 </div>
 
 
-<h1 id="landing-title" class="text-center" >Choose your best way to move</h1>
+<h1 id="landing-title" class="text-center">
+  <%= current_user.email.split("@")[0].capitalize %> Choose your best way to move
+</h1>
 
 
 <div class="card-deck ">
   <div class="row">
     <% @cars.sample(3).each do |car| %>
     <div class="col-sm-4">
+
 
 
 
@@ -56,17 +59,26 @@
             <h4 class="card-title"><strong><%= car.model.capitalize %></strong></h4>
             <p class="card-text"><em><%= car.description %></em></p>
             <%= link_to "show", car_path(car), class:"btn btn-info" %>
+
           </div>
+          <div class="card-actions">
+            <button class="btn btn-link">
+             Do stuff
+           </button>
+         </div>
+         <div class="card-body">
+          Content of panel
         </div>
-
-
-
+      </div> -->
     </div>
-    <% end %>
   </div>
 </div>
+<% end %>
+</div>
+</div>
 
+<%= link_to "Index", root_path, class:"btn btn-primary btn-lg" %>
 
+<%= link_to "Go to CARS!!!", cars_path, class:"btn btn-success btn-lg" %>
 
-<%= link_to "index", root_path, class:"btn btn-primary" %>
 
