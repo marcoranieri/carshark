@@ -1,7 +1,9 @@
 .banner {
   text-align: center;
+
   height: 85vh;
   // height: calc(100vh - 70px);
+
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
@@ -28,4 +30,13 @@
   margin-bottom: 120px;
   text-shadow: 0 1px 1px rgba(0,0,0,.7);
 
+}
+.banner-edit-profile {
+  color: white;
+  text-align: center;
+  height: 100vh;
+   /*if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  background-position: center;
+  margin-top: -45px
 }

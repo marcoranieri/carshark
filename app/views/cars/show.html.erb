@@ -1,4 +1,20 @@
-<h1>Carshark</h1>
-<%= @car.model %>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://kitt.lewagon.com/placeholder/cities/berlin');">
+  <div class="banner-content">
+    <h1><%= @car.model.capitalize %></h1>
+    <h2><%= @car.description%></h2>
+    <ul>
+      <li>
+        <p>Year: <%= @car.year%></p>
+      </li>
+      <li>
+        <p>Seats: <%= @car.seats%></p>
+      </li>
+    </ul>
+    <p>Learn to code with us in Berlin</p>
+    <a class="btn btn-primary btn-lg">BOOK THAT B*ITCH!</a>
+  </div>
+</div>
+
+
 
 
