@@ -22,7 +22,11 @@
 
 
 <h1 id="landing-title" class="text-center">
-  <%= current_user.email.split("@")[0].capitalize %> Choose your best way to move
+  <% if current_user %>
+    <%= current_user.email.split("@")[0].capitalize %> Choose your best way to move
+  <% else %>
+    Choose your best way to move
+  <% end %>
 </h1>
 
 
