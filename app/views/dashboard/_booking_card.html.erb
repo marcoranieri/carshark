@@ -1,0 +1,19 @@
+<div class="card">
+  <img class="card-img-top" src="<%= booking.car.photo %>" alt="Card image">
+  <%= link_to " ", car_path(booking.car), class:"card-link-top" %>
+
+  <div class="card-body">
+    <h4 class="card-title">
+      <strong><%= booking.car.model.capitalize %></strong>
+    </h4>
+    <p>
+      Booked from <%= booking.car.user.email %>
+
+      <% if booking.start_date && booking.end_date %>
+        from <%= l(booking.start_date, format: :short) %>
+        to <%= l(booking.end_date, format: :short) %>
+      <% end %>
+
+    </p>
+  </div>
+</div>

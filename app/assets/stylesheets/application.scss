@@ -18,19 +18,6 @@
   margin-top: 50px;
 }
 
-// make img card look nice-----------------
-.card-img-top {
-  width: 180%;
-  height: 15vw;
-  object-fit: cover;
-  box-shadow: 1px 1px 3px gray;
-  border-radius: 1px;
-}
-
-.card {
-  padding: 33px;
-  width: 250px !important;
-}
 //card hover ---------------------------------------
 
 
@@ -74,7 +61,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
+  height: 50px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
 }
@@ -96,10 +83,6 @@
   color: #D23333;
 }
 
-#luxury:hover {
+#luxury {
   color: orange;
-}
-
-.row {
-  margin: 0 15px;
 }
