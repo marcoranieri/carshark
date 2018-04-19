@@ -29,13 +29,9 @@
 
 <h1 id="landing-title" class="text-center" style="margin-top: 80px;">
   <% if current_user %>
-<<<<<<< HEAD
-    <%= current_user.email.split("@")[0].capitalize %> Choose your best way to move
-=======
     <%= current_user.email.split("@")[0].capitalize %> choose your best way to move
   <% else %>
     Choose your best way to move
->>>>>>> master
   <% end %>
 </h1>
 
@@ -44,25 +40,6 @@
   <div class="row">
     <% @cars.sample(3).each do |car| %>
     <div class="col-sm-4">
-<<<<<<< HEAD
-     <div class="card" style="width:400px">
-      <div class="custom-card">
-        <img class="card-img-top" src="<%= ["https://images.unsplash.com/photo-1511338040450-bf274acbd588?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=93055a0f161d0d0cc6418efb0d678195&auto=format&fit=crop&w=967&q=80","https://images.unsplash.com/photo-1511360764098-91482031eaf6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f00548e0353da749a820370a03be8cfc&auto=format&fit=crop&w=1050&q=80","https://images.unsplash.com/photo-1523597193482-bd0e30999c06?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1cddaba8605d3997346e26d39763318e&auto=format&fit=crop&w=634&q=80"].sample %>" alt="Card image">
-        <%= link_to " ", car_path(car), class:"card-link-top" %>
-        <!-- <div class="card-body custom-card">
-        </div> -->
-        <h4 class="card-title"><strong><%= car.model.capitalize %></strong></h4>
-        <p class="card-text"><em><%= car.description %></em></p>
-        <!-- <div class="panel panel-defaultcard-linked">
-          <a class="card-link" href="..."></a>
-          <div class="card-title">
-            <div class="card-title-texts">
-              <h3>Heading</h3>
-            </div>
-=======
-
-
-
       <div class="card" style="width:400px">
           <img class="card-img-top" src="<%= [
           "https://images.unsplash.com/photo-1511360764098-91482031eaf6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f00548e0353da749a820370a03be8cfc&auto=format&fit=crop&w=1050&q=80",
@@ -90,10 +67,13 @@
           <div class="card-body">
             <h4 class="card-title"><strong><%= car.model.capitalize %></strong></h4>
             <p class="card-text"><em><%= car.description %></em></p>
->>>>>>> master
           </div>
+        </div>
+      </div>
+    <% end %>
+   </div>
+</div>
 
-<<<<<<< HEAD
 <center><%= link_to "See all Carsharks", cars_path, class:"btn btn-primary btn-lg" %></center>
 
  <div class="tutoriel">
@@ -122,20 +102,4 @@
     </ul>
  </div>
 
-
-</div>
-
-
-=======
-        </div>
-      </div>
-    <% end %>
-
-   </div>
-</div>
->>>>>>> master
-
-<div class="text-center">
-  <%= link_to "View CARS", cars_path, class:"btn btn-primary btn-lg" %>
-</div>
 
