@@ -1,7 +1,8 @@
 <div class="navbar-wagon navbar-fixed-top">
   <!-- Logo -->
-  <a href="/" class="navbar-wagon-brand">
-    <%= image_tag 'https://tbncdn.freelogodesign.org/df2a4b80-35d4-454c-b8dc-ebcf35e9b54d.png?1524050115271' %>
+  <a href="/" class="navbar-wagon-brand" style = "height: 100px;
+  width: 100px" >
+    <%= image_tag 'https://tbncdn.freelogodesign.org/cdd5dc50-b37a-4ec9-a901-315fdeaf1490.png?1524132821797' %>
   </a>
 
   <!-- Right Navigation -->
@@ -9,16 +10,20 @@
 
     <a href="" class="navbar-wagon-item navbar-wagon-link">Find a carshark</a>
     <a href="" class="navbar-wagon-item navbar-wagon-link">Rent your carshark</a>
+    <a href="" class="navbar-wagon-item navbar-wagon-link">Sign up</a>
 
     <!-- Profile picture with dropdown list -->
     <div class="navbar-wagon-item">
       <div class="dropdown">
+        <% if current_user %>
         <img src="https://mashablesocialmediaday.it/wp-content/uploads/2017/12/newmia-320x322.jpg" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
           <li><%= link_to "Profile", edit_user_registration_path %></li>
           <li><a href="#">Dashboard</a></li>
           <li><a href="#">Log Out</a></li>
         </ul>
+        <% end %>
       </div>
     </div>
   </div>
@@ -30,7 +35,7 @@
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
         <li><a href="#">Host</a></li>
         <li><a href="#">Trips</a></li>
-        <li><a href="#">Messagese</a></li>
+        <li><a href="#">Messages</a></li>
       </ul>
     </div>
   </div>
