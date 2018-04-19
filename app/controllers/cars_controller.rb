@@ -4,7 +4,7 @@ class CarsController < ApplicationController
   def index
     if params.has_key?(:q)
 # search in SQL if found name containing anywhere(%) the value of research
-      @cars = Car.where('model LIKE ?', "%#{params[:q]}%")
+      @cars = Car.where('model ILIKE ?', "%#{params[:q]}%")
     else
       @cars = Car.all
     end

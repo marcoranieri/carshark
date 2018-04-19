@@ -11,19 +11,14 @@
   </head>
   <body>
 
-<%= javascript_include_tag "application" %>
-<%= javascript_include_tag "https://maps.googleapis.com/maps/api/js" %>
-<%= javascript_pack_tag "map" %>
-
-    <%= render 'shared/navbar' %>
 
     <%= render 'shared/flashes' %>
 
+    <%= render 'shared/navbar' %>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
     <%= yield %>
+
     <%= render 'shared/footer' %>
     <%= javascript_include_tag "application" %>
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCw2_oekTZ6ARsxVciO1E5cl2ji55DsYFs" %>

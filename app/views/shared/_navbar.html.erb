@@ -1,22 +1,21 @@
 <div class="navbar-wagon navbar-fixed-top">
   <!-- Logo -->
   <a href="/" class="navbar-wagon-brand">
-    <%= image_tag 'carshark.png' %>
+    <%= image_tag 'https://tbncdn.freelogodesign.org/df2a4b80-35d4-454c-b8dc-ebcf35e9b54d.png?1524050115271' %>
   </a>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Host</a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Trips</a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Messages</a>
+    <a href="/cars" class="navbar-wagon-item navbar-wagon-link">Find a carshark</a>
+    <a href="" class="navbar-wagon-item navbar-wagon-link">Rent your carshark</a>
 
     <!-- Profile picture with dropdown list -->
     <div class="navbar-wagon-item">
       <div class="dropdown">
-        <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+        <img src="https://mashablesocialmediaday.it/wp-content/uploads/2017/12/newmia-320x322.jpg" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li><a href="#">Profile</a></li>
+          <li><%= link_to "Profile", edit_user_registration_path %></li>
           <li><a href="#">Dashboard</a></li>
           <li><a href="#">Log Out</a></li>
         </ul>
