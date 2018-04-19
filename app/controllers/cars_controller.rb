@@ -8,7 +8,7 @@ class CarsController < ApplicationController
     else
       @cars = Car.all
     end
-    car_index
+    car_index_map
   end
 
   def show
@@ -37,7 +37,7 @@ class CarsController < ApplicationController
     params.require(:car).permit(:name, :photo)
   end
 
-  def car_index
+  def car_index_map
     @cars = Car.where.not(latitude: nil, longitude: nil)
 
     @markers = @cars.map do |car|
