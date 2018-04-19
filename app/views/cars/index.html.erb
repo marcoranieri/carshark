@@ -9,17 +9,15 @@
 
 <form class="form-inline text-center" method="get" action="/cars">
 
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q"> <!-- NAME="q" will PASS toINDEX.html.erb the PARAMS with the "word" searched to show the result -->
+  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q"> <!-- NAME="q" will PASS toINDEX.html.erb the PARAMS with the "word" searched to show the result -->
 
-    <button class="btn btn-primary my-2 my-sm-0" type="submit">Search a car!</button>
-  </form>
+  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search a car!</button>
+</form>
 
 <div class="card-deck ">
   <div class="row">
     <% @cars.each do |car| %>
     <div class="col-sm-4">
-
-
 
         <div class="card" style="width:400px">
           <img class="card-img-top" src="<%= [
@@ -52,14 +50,20 @@
             <p class="card-text" style="white-space: nowrap; overflow: hidden; text-overflow:ellipsis; font-size: 15px;">
               <em><%= car.description %></em>
             </p>
-          </div>
+          </div></div>
+
         </div>
 
 
 
-    </div>
     <% end %>
+    </div>
   </div>
 </div>
-
+<div
+id="map"
+style="width: 100%;
+height: 600px;"
+data-markers="<%= @markers.to_json %>"
+></div>
 <a href="#top"><h3>Back to TOP</h3></a>
