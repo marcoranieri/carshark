@@ -13,6 +13,61 @@
   margin-top: -45px;
   padding-left: 10px;
 }
+
+// Banner in SHOW car -------------------------
+#wrapper {
+height:calc(100vh - 50px) !important;
+}
+
+.full-view {
+  height: 70vh !important;
+  display: flex;
+
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.banner-content p {
+  margin: 10px !important;
+  padding: 10px;
+  font-size: 40px !important;
+  color: white;
+}
+
+.full-width {
+  width: 100%;
+}
+
+#car-title {
+  color: white;
+  margin-bottom: 40px;
+  letter-spacing: 5px;
+}
+#info {
+  display: flex;
+  justify-content: space-around;
+  padding:25px 25px 0px 25px;
+  font-size: 30px !important;
+  margin-bottom:10px;
+}
+
+#info-description {
+  display: flex;
+  justify-content: space-around;
+  padding:0px 25px 25px 25px;
+}
+
+#description {
+  width: 60%;
+  text-align: justify;
+}
+
+#btn-show-book {
+  min-width: 15em;
+}
+
+// --------------------------------------------
+
 .banner h1 {
 
   font-weight: thin;
