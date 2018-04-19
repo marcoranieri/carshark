@@ -1,0 +1,13 @@
+<div class="card">
+  <img class="card-img-top" src="<%= car.photo %>" alt="Card image">
+  <%= link_to " ", car_path(car), class:"card-link-top" %>
+
+  <div class="card-body">
+    <h4 class="card-title">
+      <strong><%= car.model.capitalize %></strong>
+    </h4>
+    <p class="card-text">
+      <em><%= car.description.first(50) + "..." %></em>
+    </p>
+  </div>
+</div>

@@ -38,9 +38,9 @@ class CarsController < ApplicationController
   end
 
   def car_index_map
-    @cars = Car.where.not(latitude: nil, longitude: nil)
+    @carsT = Car.where.not(latitude: nil, longitude: nil)
 
-    @markers = @cars.map do |car|
+    @markers = @carsT.map do |car|
       {
         lat: car.latitude,
         lng: car.longitude

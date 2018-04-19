@@ -1,1 +1,48 @@
 // Specific CSS for your home-page
+
+.h2{
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 12.5px;
+}
+
+.tutoriel {
+    align-items:center;
+    padding-top: 50px;
+    background-color: white;
+    text-align: center;
+    height: 40vh;
+}
+.steps {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.mt3 {
+    margin-top: 30px;
+}
+
+.steps-icons {
+    width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title-action {
+    font-size: 30px
+}
+
+ul {
+    padding: 40px 60px 40px 60px;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+
+}
+
+.wd-100{
+    width: 20%;
+}

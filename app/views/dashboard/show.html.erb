@@ -1,0 +1,28 @@
+<div class="container">
+
+  <!-- Owned cars section -->
+  <h1>My cars</h1>
+
+  <div class="row">
+    <% @cars.each do |car| %>
+      <div class="col-xs-12 col-md-4">
+        <%= render 'card', car: car %>
+      </div>
+    <% end %>
+  </div>
+
+
+  <!-- Bookings made by user -->
+  <h1>My bookings</h1>
+
+  <!-- Picture of a booked car -->
+  <div class="row">
+    <% @bookings.each do |booking| %>
+      <div class="col-xs-12 col-md-4">
+        <%= render 'booking_card', booking: booking %>
+      </div>
+    <% end %>
+  </div>
+
+
+</div>

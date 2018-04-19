@@ -1,5 +1,4 @@
 class BookingsController < ApplicationController
-  layout "forpartials"
   def new
     @booking = Booking.new
     @car = Car.find(params[:car_id])

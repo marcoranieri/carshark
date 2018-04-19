@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: -45px;
-  background-color: transparent;
+  background-color: white;
   transition: 0.5s background-color ease;
 }
 
@@ -45,11 +45,11 @@
 
 /* Navbar link */
 .navbar-wagon-link {
-  color: white;
-  font-size: 14px;
+  color: black;
+  font-size: 20px;
 }
 .navbar-wagon-link:hover {
-  color: yellow;
+  color: orange;
   text-decoration: none;
 }
 
