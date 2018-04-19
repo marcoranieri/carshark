@@ -7,4 +7,6 @@ Rails.application.routes.draw do
     resources :bookings
   end
 
+  get "arbi", to: "dashboard#show", as: :dashboard
+
   end
