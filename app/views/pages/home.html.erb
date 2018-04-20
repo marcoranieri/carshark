@@ -1,48 +1,47 @@
-
+<!--Banner -->
 
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(255,255,255) 0%, rgba(3,2,1,0.6) 30%), url('https://kalemitravel.com/wp-content/uploads/2014/09/lamborghini_centro_milano_2.jpg');">
 
-  <div class="banner-content">
+    <div class="banner-content">
 
-    <p>Don't be just a fish <br> <strong>Shark
-      <span id="luxury"> luxury</span> cars</strong>
-    </p>
+      <p>Don't be just a fish <br> <strong>Shark
+        <span id="luxury"> luxury</span> cars</strong>
+      </p>
 
-    <form class="form-inline" method="get" action="/cars">
-      <label class="sr-only" for="inlineFormInputName2">Name</label>
+      <form class="form-inline" method="get" action="/cars">
+        <label class="sr-only" for="inlineFormInputName2">Name</label>
 
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q"> <!-- NAME="q" will PASS toINDEX.html.erb the PARAMS with the "word" searched to show the result -->
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q"> <!-- NAME="q" will PASS toINDEX.html.erb the PARAMS with the "word" searched to show the result -->
 
-      <input type="date" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Pickup Date">
+        <input type="text" class="form-control mb-2 mr-sm-2 datepicker" id="inlineFormInputName2" placeholder="Pickup Date">
 
-      <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
-      <div class="input-group mb-2 mr-sm-2">
-        <div class="input-group-prepend">
-          <div class="input-group-text"></div>
+        <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+        <div class="input-group mb-2 mr-sm-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text"></div>
+          </div>
+          <input type="text" class="form-control datepicker" id="inlineFormInputGroupUsername2" placeholder="Drop Off Date">
         </div>
-        <input type="date" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Drop Off Date">
-      </div>
-      <button type="submit" class="btn btn-primary mb-2">Search</button>
-    </form>
-  </div>
+        <button type="submit" class="btn btn-primary mb-2">Search</button>
+      </form>
+    </div>
 </div>
 
-<div class="container">
+<!--CARDS -->
 
 <h1 id="landing-title" class="text-center" style="margin-top: 80px;">
-  <% if current_user %>
-    <%= current_user.email.split("@")[0].capitalize %> Here are our featured cars
-  <% else %>
-   Here are our featured cars
-  <% end %>
-</h1>
+    <% if current_user %>
+      <%= current_user.email.split("@")[0].capitalize %> Here are our featured cars
+    <% else %>
+     Here are our featured cars
+    <% end %>
+  </h1>
 
-
-<div class="card-deck ">
+<div class="container-fluid">
   <div class="row">
     <% @cars.sample(3).each do |car| %>
     <div class="col-sm-4">
-      <div class="card" style="width:400px; padding: 15px;">
+      <div class="card">
           <img class="card-img-top" src="<%= car.photo %>" alt="Card image">
 
           <%= link_to " ", car_path(car), class:"card-link-top" %>
@@ -58,40 +57,41 @@
    </div>
 </div>
 
-<center><%= link_to "Featured Cars", cars_path, class:"btn btn-primary btn-lg" %></center>
+<center style="margin-top: 30px;" >
+  <%= link_to "Featured Cars", cars_path, class:"btn btn-primary btn-lg" %>
+</center>
+
+
+<!-- Info -->
+
+<div class="tutoriel">
+  <h2>How does it work ?</h2>
+  <ul class="steps">
+          <li class="wd-100">
+
+              <img src="https://image.flaticon.com/icons/svg/305/305137.svg" width="100" height="101" alt="">
+              <p class="title-action">Register</p>
+              <p class="fz-16 lightmorecolor fwb">Your account <br> in under 2 minutes</p>
+          </li>
+          <li class="wd-100">
+              <img src="https://image.flaticon.com/icons/svg/305/305139.svg" width="100" height="101" alt="recieve">
+              <p class="title-action">Receive or Send</p>
+              <p class="fz-16 lightmorecolor fwb"> Rental requests <br> </p>
+          </li>
+          <li class="wd-100">
+              <img src="https://image.flaticon.com/icons/svg/305/305112.svg" width="100" height="101" alt="">
+              <p class="title-action">Meet</p>
+              <p class="fz-16 lightmorecolor fwb">The owner to get <br> the keys</p>
+          </li>
+          <li class="wd-100">
+              <img src="https://image.flaticon.com/icons/svg/308/308837.svg" width="100" height="101" alt="">
+              <p class="title-action">Easy Payments </p>
+              <p class="fz-16 lightmorecolor fwb"><br> made online</p>
+
+          </li>
+  </ul>
+
+  <%= link_to "Create an account", cars_path, class:"btn btn-primary btn-lg", id:"account-btn" %>
 </div>
-<div class="wrapper-info">
 
- <div class="tutoriel">
-    <h2>How does it work ?</h2>
-     <ul class="steps">
-        <li class="wd-100">
-
-            <img src="https://image.flaticon.com/icons/svg/305/305137.svg" width="100" height="101" alt="">
-            <p class="title-action">Register</p>
-            <p class="fz-16 lightmorecolor fwb">Your account <br> in under 2 minutes</p>
-        </li>
-        <li class="wd-100">
-            <img src="https://image.flaticon.com/icons/svg/305/305139.svg" width="100" height="101" alt="recieve">
-            <p class="title-action">Receive or Send</p>
-            <p class="fz-16 lightmorecolor fwb"> Rental requests <br> </p>
-        </li>
-        <li class="wd-100">
-            <img src="https://image.flaticon.com/icons/svg/305/305112.svg" width="100" height="101" alt="">
-            <p class="title-action">Meet</p>
-            <p class="fz-16 lightmorecolor fwb">The owner to get <br> the keys</p>
-        </li>
-        <li class="wd-100">
-            <img src="https://image.flaticon.com/icons/svg/308/308837.svg" width="100" height="101" alt="">
-            <p class="title-action">Easy Payments </p>
-            <p class="fz-16 lightmorecolor fwb"><br> made online</p>
-
-        </li>
-      </ul>
-      <div id="logo"><%= link_to "Create an account", cars_path, class:"btn btn-primary btn-lg", id:"account-btn" %></div>
-  </div>
-
-
-
-
-</div>
+<%= render 'shared/footer' %>
