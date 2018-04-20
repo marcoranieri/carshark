@@ -7,22 +7,25 @@
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
-
-    <a href="/cars" class="navbar-wagon-item navbar-wagon-link">Find a carshark</a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Rent your carshark</a>
-    <a href="/users/sign_up" class="navbar-wagon-item navbar-wagon-link">Sign up</a>
-
+    <% if current_user %>
+      <a href="/cars" class="navbar-wagon-item navbar-wagon-link">Find a carshark</a>
+      <a href="" class="navbar-wagon-item navbar-wagon-link">Rent your carshark</a>
+      <a href="/dashboard" class="navbar-wagon-item navbar-wagon-link">Dashboard</a>
+    <% else %>
+      <a href="/users/sign_up" class="navbar-wagon-item navbar-wagon-link">Sign up</a>
+      <a href="/users/sign_in" class="navbar-wagon-item navbar-wagon-link">Log in</a>
+    <% end %>
     <!-- Profile picture with dropdown list -->
     <div class="navbar-wagon-item">
       <div class="dropdown">
         <% if current_user %>
-        <img src="https://mashablesocialmediaday.it/wp-content/uploads/2017/12/newmia-320x322.jpg" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+          <img src="https://mashablesocialmediaday.it/wp-content/uploads/2017/12/newmia-320x322.jpg" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
 
-        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li><%= link_to "Profile", edit_user_registration_path %></li>
-          <li><%= link_to "Dashboard",  dashboard_path %></li>
-          <li><a href="#">Log Out</a></li>
-        </ul>
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+            <li><%= link_to "Profile", edit_user_registration_path %></li>
+            <li><%= link_to "Dashboard",  dashboard_path %></li>
+            <li><a href="#">Log Out</a></li>
+          </ul>
         <% end %>
       </div>
     </div>

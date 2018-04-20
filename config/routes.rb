@@ -9,6 +9,6 @@ Rails.application.routes.draw do
 
   resources :bookings, only: [ :show ]
 
-  get "arbi", to: "dashboard#show", as: :dashboard
+  get "dashboard", to: "dashboard#show", as: :dashboard
 
   end
