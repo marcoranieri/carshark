@@ -22,12 +22,12 @@ Car.create(
   seats: 2,
   rate: 1080,
   description: "Launched on 28 February 2011 at the Geneva Motor Show, five months after its initial unveiling in Sant'Agata Bolognese, the vehicle, internally codenamed LB834, was designed to replace the then-decade-old Murciélago as the new flagship model",
-  photo: ""
+  photo: "https://images.unsplash.com/photo-1519410279512-dab70daa49a6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d1ca2cb04bc00814390bff51c433f03a&auto=format&fit=crop&w=2504&q=80"
   )
 Car.create(
   user: c,
   model: "Fiat 500",
-  year: "2005",
+  year: "1965",
   seats: 4,
   rate: 100,
   description: "The Fiat 500 is a rear-engined, four seat, small city car that was manufactured and marketed by Fiat Automobiles from 1957 to 1975 over a single generation in two-door saloon and two-door station wagon bodystyles.",
@@ -142,7 +142,7 @@ Car.create(
   seats: 2,
   rate: 580,
   description: "The Aston Martin Vanquish is a super grand tourer introduced by British car manufacturer Aston Martin in 2001 as a successor to the ageing Virage range.",
-  photo: "https://www.netcarshow.com/Aston_Martin-AM_310_Vanquish-2013-1024-01.jpg"
+  photo: "https://images.unsplash.com/photo-1519410279512-dab70daa49a6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d1ca2cb04bc00814390bff51c433f03a&auto=format&fit=crop&w=2504&q=80"
 )
 
 Car.create(
