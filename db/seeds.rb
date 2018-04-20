@@ -22,7 +22,7 @@ Car.create(
   seats: 2,
   rate: 1080,
   description: "Launched on 28 February 2011 at the Geneva Motor Show, five months after its initial unveiling in Sant'Agata Bolognese, the vehicle, internally codenamed LB834, was designed to replace the then-decade-old Murciélago as the new flagship model",
-  photo: "https://images.unsplash.com/photo-1523597193482-bd0e30999c06?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1cddaba8605d3997346e26d39763318e&auto=format&fit=crop&w=634&q=80"
+  photo: ""
   )
 Car.create(
   user: c,
