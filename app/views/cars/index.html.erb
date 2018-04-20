@@ -1,50 +1,56 @@
-<h1 class="text-center" id="top">Welcome to the show:</h1>
-<h3 class="text-center">
+<div class="container">
 
-<% if current_user %>
-    <h3 class="text-center"><%= current_user.email.split("@")[0].capitalize %>, find now the perfect Carshark</h3>
-  <% else %>
-    <h3 class="text-center">Find now the perfect Carshark</h3>
-  <% end %>
+  <h1 class="text-center" id="top">Welcome to the show:</h1>
+  <h3 class="text-center">
 
-<form class="form-inline text-center" method="get" action="/cars">
-
-  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q"> <!-- NAME="q" will PASS toINDEX.html.erb the PARAMS with the "word" searched to show the result -->
-
-  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search a car!</button>
-</form>
-
-<div class="card-deck ">
-  <div class="row">
-    <% @cars.each do |car| %>
-    <div class="col-sm-4">
-
-        <div class="card" style="width:400px">
-          <img class="card-img-top" src="<%= car.photo %>" alt="Card image">
-
-          <%= link_to "", car_path(car), class:"card-link-top" %>
-
-          <div class="card-body">
-            <h4 class="card-title" style="margin-right: -190px;">
-              <strong><%= car.model.capitalize %></strong>
-            </h4>
-            <p class="card-text" style="white-space: nowrap; overflow: hidden; text-overflow:ellipsis; font-size: 15px;">
-              <em><%= car.description %></em>
-            </p>
-          </div></div>
-
-        </div>
-
-
-
+  <% if current_user %>
+      <h3 class="text-center"><%= current_user.email.split("@")[0].capitalize %>, find now the perfect Carshark</h3>
+    <% else %>
+      <h3 class="text-center">Find now the perfect Carshark</h3>
     <% end %>
+
+  <form class="form-inline text-center margin-bottom" method="get" action="/cars">
+
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q"> <!-- NAME="q" will PASS toINDEX.html.erb the PARAMS with the "word" searched to show the result -->
+
+    <button class="btn btn-primary my-2 my-sm-0" type="submit">Search a car!</button>
+    <%= link_to "⟲", cars_path, class:"btn btn-warning btn-sm", id:"refresh" %>
+  </form>
+  <div class="card-deck ">
+    <div class="row">
+      <% @cars.each do |car| %>
+      <div class="col-sm-4">
+
+          <div class="card" style="width:350px">
+            <img class="card-img-top" src="<%= car.photo %>" alt="Card image">
+
+            <%= link_to "", car_path(car), class:"card-link-top" %>
+
+            <div class="card-body">
+              <h4 class="card-title" style="margin-right: -190px;">
+                <strong><%= car.model.capitalize %></strong>
+              </h4>
+              <p class="card-text" style="white-space: nowrap; overflow: hidden; text-overflow:ellipsis; font-size: 15px;">
+                <em><%= car.description %></em>
+              </p>
+            </div></div>
+
+          </div>
+
+
+
+      <% end %>
+      </div>
     </div>
   </div>
+  <a class="text-center" href="#top"><h3>Back to TOP</h3></a>
+
+  <div
+  id="map"
+  style="width: 100%;
+  height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+  ></div>
+
+
 </div>
-<div
-id="map"
-style="width: 100%;
-height: 600px;"
-data-markers="<%= @markers.to_json %>"
-></div>
-<a href="#top"><h3>Back to TOP</h3></a>
