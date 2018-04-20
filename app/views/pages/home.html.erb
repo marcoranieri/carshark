@@ -31,7 +31,7 @@
 
 <h1 id="landing-title" class="text-center" style="margin-top: 80px;">
     <% if current_user %>
-      <%= current_user.email.split("@")[0].capitalize %> Here are our featured cars
+      <%= current_user.email.split("@")[0].capitalize %>, here are our featured cars
     <% else %>
      Here are our featured cars
     <% end %>
@@ -90,8 +90,9 @@
 
           </li>
   </ul>
-
-  <%= link_to "Create an account", cars_path, class:"btn btn-primary btn-lg", id:"account-btn" %>
+<% unless current_user %>
+  <%= link_to "Create an account", new_user_registration_path, class:"btn btn-primary btn-lg", id:"account-btn" %>
+  <% end %>
 </div>
 
 <%= render 'shared/footer' %>

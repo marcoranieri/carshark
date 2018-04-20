@@ -26,7 +26,10 @@
     <div id="description">
       <p><%= @car.description%></p>
     </div>
-    <!-- Form for booking -->
-    <%= render 'bookings/form', car: @car, booking: @booking %>
   </div>
+    <!-- Form for booking -->
+
+   <center><div class="text-center" style="width: 15%;">
+      <%= render 'bookings/form', car: @car, booking: @booking %>
+    </div></center>
 </div>

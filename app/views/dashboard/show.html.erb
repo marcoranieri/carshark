@@ -13,12 +13,13 @@
 
 
   <!-- Bookings made by user -->
-  <h1>My bookings</h1>
+  <h1>My bookings <br>
+    <small><span style="color: orange">PENDING REQUESTS</h1>
 
   <!-- Picture of a booked car -->
   <div class="row">
     <% @bookings.each do |booking| %>
-      <div class="col-xs-12 col-md-4">
+      <div class="col-xs-12 col-md-4" style="border: 1px dotted lightgray; padding:5px; margin: 5px;">
         <%= render 'booking_card', booking: booking %>
       </div>
     <% end %>
