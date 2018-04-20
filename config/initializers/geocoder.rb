@@ -17,9 +17,9 @@ Geocoder.configure(
   # always_raise: [],
 
   # Calculation options
-  # units: :km,                 # :km for kilometers or :mi for miles
+   units: :km,                 # :km for kilometers or :mi for miles
   # distances: :linear          # :spherical or :linear
-   lookup:    :google,
+  lookup:    :google,
   api_key:   ENV['AIzaSyCw2_oekTZ6ARsxVciO1E5cl2ji55DsYFs'],
   use_https: true
 )
