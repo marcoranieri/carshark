@@ -26,10 +26,7 @@
     <div id="description">
       <p><%= @car.description%></p>
     </div>
-    <div id="btn-book">
-      <div id="btn-show-book" class="btn btn-primary btn-lg">
-        <p>Book</p>
-      </div>
-    </div>
+    <!-- Form for booking -->
+    <%= render 'bookings/form', car: @car, booking: @booking %>
   </div>
 </div>

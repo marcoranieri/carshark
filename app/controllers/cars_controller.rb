@@ -12,6 +12,9 @@ class CarsController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
+    @booking.start_date = params[:start_date]
+    @booking.end_date = params[:end_date]
   end
 
   def new
